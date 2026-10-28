@@ -6,7 +6,7 @@ It might also work with a Google Photos Takeout export (just point it to the med
 
 ## Run it online
 
-Open https://prajuljaggi577.github.io/flow-takeout/ in Chrome or Edge, then choose your Takeout folder.
+Open https://prajuljaggi577.github.io/flow-takeout/, then choose your Takeout folder.
 
 Nothing is stored on the web. The site only serves the app's files. Your photos are read by your browser and never uploaded. Your library, notes, tags and albums are saved in your browser, for this address only. Clearing the site's data in your browser removes them.
 
