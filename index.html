@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>flow</title>
+    <meta
+      name="description"
+      content="Browse your Google Flow Takeout photos in your browser. Nothing uploads."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="top">
+      <a class="wordmark" href="#/photos">flow</a>
+      <nav class="sections" aria-label="Sections">
+        <a href="#/photos" data-nav="photos">Photos</a>
+        <a href="#/favs" data-nav="favs">Favourites</a>
+        <a href="#/videos" data-nav="videos">Videos</a>
+        <a href="#/albums" data-nav="albums">Albums</a>
+      </nav>
+      <label class="search">
+        <span class="sr-only">Search</span>
+        <span class="search-ico" data-icon="search" aria-hidden="true"></span>
+        <input
+          id="q"
+          type="search"
+          placeholder="Search prompts. Try #tag or -word"
+          autocomplete="off"
+        />
+      </label>
+      <div class="top-actions">
+        <button
+          class="icon-btn"
+          type="button"
+          data-act="pick"
+          title="Open folder"
+          aria-label="Open folder"
+        >
+          <span data-icon="folder"></span>
+        </button>
+        <button
+          class="icon-btn"
+          type="button"
+          data-act="theme"
+          title="Theme"
+          aria-label="Change theme"
+        >
+          <span data-icon="theme"></span>
+        </button>
+        <button
+          class="icon-btn"
+          type="button"
+          data-act="menu"
+          title="Data and help"
+          aria-label="Data and help"
+        >
+          <span data-icon="more"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="main" tabindex="-1"><div id="view"></div></main>
+
+    <nav class="bottombar" aria-label="Sections">
+      <a href="#/photos" data-nav="photos"
+        ><span data-icon="photos"></span>Photos</a
+      >
+      <a href="#/favs" data-nav="favs"
+        ><span data-icon="star"></span>Favourites</a
+      >
+      <a href="#/videos" data-nav="videos"
+        ><span data-icon="video"></span>Videos</a
+      >
+      <a href="#/albums" data-nav="albums"
+        ><span data-icon="album"></span>Albums</a
+      >
+    </nav>
+
+    <dialog id="viewer" class="viewer" aria-label="Block viewer"></dialog>
+    <dialog id="dialog" class="dialog" aria-labelledby="dialog-title"></dialog>
+    <div id="progress" class="progress" role="status" hidden></div>
+    <div
+      id="toast"
+      class="toast"
+      popover="manual"
+      role="status"
+      aria-live="polite"
+    ></div>
+
+    <input type="file" id="fileFallback" webkitdirectory multiple hidden />
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
